@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Mainboard.css';
 import styled from 'styled-components';
 import Pin from './Pin';
 
@@ -8,7 +9,7 @@ function Mainboard(props) {
 
     return (
         <Wrapper>
-            <Container>
+            <Container className="mainboard__container">
                 {pins.map((pin, index) => { 
                     let {urls} = pin;   
                     //Use the key prop when Rendering a List with React            
@@ -34,7 +35,10 @@ const Wrapper = styled.div`
 `
 
 const Container = styled.div`
-    display: flex;
-    width: 80%;
+    //display: flex-wrap;
+    //column-count: 5;
+    //column-gap: 10px;
+    margin: 0 auto;
+    height: 100%;
     background-color: white;
 `

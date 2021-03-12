@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Header from './components/Header';
-import Mainboard from './components/Mainboard';
-import unsplash from './api/unsplash';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
+import '../css/App.css';
+import Header from './Header';
+import Mainboard from './Mainboard';
+import unsplash from '../api/unsplash';
 
 function App() {
 
@@ -40,7 +40,7 @@ function App() {
     let promises = [];
     let pinData = [];
 
-    let pins = ["Chile", "Cars", "Motorcycles", "Video Games", "Girls"];
+    let pins = ["Programming", "Code", "Video Games"];
     pins.forEach((pinTerm) => {
       promises.push(
         getImages(pinTerm).then((res) => {

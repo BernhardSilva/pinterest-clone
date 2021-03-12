@@ -13,6 +13,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 //     onSubmit: onSearchSubmit()
 // }
 
+
 function Header(props) {
     const[input, setInput] = useState("");
     
@@ -42,11 +43,11 @@ function Header(props) {
             <SearchWrapper>
                 <SearchBarWrapper>
                 <IconButton>
-                    <SearchIcon/>
+                    <SearchIcon onClick={onSearchSubmit}/>
                 </IconButton>
                     <form>
                         {/* <input type="text" onChange={(e) => console.log(e.target.value)}/> */}
-                        <input type="text" onChange={(e) => setInput(e.target.value)}/>
+                        <input type="text" onChange={(e) => setInput(e.target.value)} placeholder="Search"/>
                         <button type="submit" onClick={onSearchSubmit}/>
                     </form>
                 </SearchBarWrapper>
