@@ -2,21 +2,18 @@
 	.mainboard__container {
 		max-width: 0px;
 		column-count: 1;
-		margin-left: 80%;
 	}
 }
 @media (min-width: 0px) and (max-width: 280px) {
 	.mainboard__container {
 		max-width: 0px;
 		column-count: 1;
-		margin-left: 60%;
 	}
 }
 @media (min-width: 0px) and (max-width: 350px) {
 	.mainboard__container {
 		max-width: 0px;
 		column-count: 1;
-		margin-left: 40%;
 	}
 }
 @media (min-width: 0px) and (max-width: 400px) {

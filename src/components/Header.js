@@ -7,7 +7,6 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import TextsmsIcon from '@material-ui/icons/Textsms';
 import FaceIcon from '@material-ui/icons/Face';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import { makeStyles } from '@material-ui/core';
 
 // props: {
 //     onSubmit: onSearchSubmit()
@@ -99,7 +98,7 @@ const LogoWrapper = styled.div`
 const HomeButtons = styled.div`
 	display: flex;
 	height: 48px;
-	min-width: 80px;
+	min-width: 95px;
 	align-items: center;
 	justify-content: center;
 	border-radius: 24px;
@@ -111,6 +110,7 @@ const HomePageButton = styled(HomeButtons)`
 	a {
 		text-decoration: none;
 		color: white;
+		font-size: 15px;
 		font-weight: 700;
 	}
 `;
@@ -121,6 +121,7 @@ const FollowingButton = styled(HomeButtons)`
 	a {
 		text-decoration: none;
 		color: black;
+		font-size: 15px;
 		font-weight: 700;
 	}
 
