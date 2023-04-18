@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import IconButton from '@material-ui/core/IconButton';
+import SearchIcon from '@material-ui/icons/Search';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import TextsmsIcon from '@material-ui/icons/Textsms';
 import FaceIcon from '@material-ui/icons/Face';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
+// props: {
+//     onSubmit: onSearchSubmit()
+// }
 
 function Header(props) {
 	const [input, setInput] = useState('');
@@ -14,6 +18,7 @@ function Header(props) {
 	const onSearchSubmit = (e) => {
 		e.preventDefault();
 		props.onSubmit(input);
+		// console.log('this is the input (Header) =>', input);
 	};
 
 	return (
@@ -33,8 +38,9 @@ function Header(props) {
 			</FollowingButton>
 			<SearchWrapper>
 				<SearchBarWrapper>
-					<IconButton></IconButton>
+					<IconButton>{/* <SearchIcon /> */}</IconButton>
 					<form>
+						{/* <input type="text" onChange={(e) => console.log(e.target.value)}/> */}
 						<input
 							type="text"
 							onChange={(e) => setInput(e.target.value)}
@@ -123,6 +129,21 @@ const FollowingButton = styled(HomeButtons)`
 		background-color: #e1e1e1;
 	}
 `;
+
+// const styles = theme => ({
+// 	root: {
+// 	  padding: theme.spacing(1),
+// 	  [theme.breakpoints.down('sm')]: {
+// 		HomePageButton: theme.palette.secondary.main,
+// 	  },
+// 	  [theme.breakpoints.up('md')]: {
+// 		backgroundColor: theme.palette.primary.main,
+// 	  },
+// 	  [theme.breakpoints.up('lg')]: {
+// 		backgroundColor: green[500],
+// 	  },
+// 	},
+//   });
 
 const SearchWrapper = styled.div`
 	flex: 1;
